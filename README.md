@@ -1,3 +1,3 @@
-# doc
+# Document repo for dumber bundler
 
-Documentation of dumber bundler. https://dumberjs.github.io/doc/
+https://dumberjs.github.io/doc/
