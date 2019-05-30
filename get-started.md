@@ -8,7 +8,7 @@ permalink: /get-started
 
 # Get Started
 
-Let's scaffold a front-end SPA project using dumber bundler. We use ["makes"](https://github.com/makesjs/makes) to create one.
+Let's scaffold a front-end SPA project using dumber bundler. We use ["makes"](https://github.com/makesjs/makes) to help the scaffolding.
 
 ```bash
 npx makes dumberjs
