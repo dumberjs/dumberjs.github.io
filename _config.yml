@@ -1,0 +1,7 @@
+remote_theme: pmarsceill/just-the-docs
+search_enabled: true
+aux_links:
+  dumber:
+    - "//github.com/dumberjs/dumber"
+  gulp-dumber:
+    - "//github.com/dumberjs/gulp-dumber"
