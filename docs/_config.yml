@@ -6,3 +6,5 @@ aux_links:
     - "//github.com/dumberjs/dumber"
   gulp-dumber:
     - "//github.com/dumberjs/gulp-dumber"
+  dumber-module-loader:
+    - "//github.com/dumberjs/dumber-module-loader"
