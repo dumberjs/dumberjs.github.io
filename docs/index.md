@@ -25,10 +25,11 @@ A dumb JavasScript bundler for Single Page Application, dumber than you and me.
 
 One unique feature:
 
-* `dumber` uses a modern AMD module loader [`dumber-module-loader`](//github.com/dumberjs/dumber-module-loader).
+* a modern AMD module loader [`dumber-module-loader`](//github.com/dumberjs/dumber-module-loader).
 
 Which enables:
 
+* npm packages compatibility.
 * flexible code splitting.
 * runtime module requiring.
 * runtime app composition.
