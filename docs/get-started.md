@@ -29,8 +29,8 @@ There is a trend in industry, a trend I dislike, to offer all-in-one solution. A
 
 `dumber` is my attempt to follow the old school UNIX philosophy: do one thing, and do it well. No transpiling, no minimization, no dev server...
 
-For other all-in-one bundlers, they are super easy to get started with small app. But for every real world app, it's inevitable for developers to customise the build and deploy tasks. Once you hit the boundaries of all-in-one solutions, it becomes harder and harder to something they didn't offer.
+For other all-in-one bundlers, they are super easy to get started with small app. But for every real world app, it's inevitable for developers to customise the build and deploy tasks. Once you hit the boundaries of all-in-one solutions, it becomes harder and harder to do something they didn't offer.
 
-`dumber` only does one thing, to pack resources into bundles. By giving up those unneeded features, `dumber` is simple yet flexible. By giving back control to the developer, `dumber` stays out of your way. You write the build/deploy tasks in gulp, `dumber` is only one small step in your task `.pipe(dr())`.
+`dumber` only does one thing, to pack resources into bundles. By giving up those unneeded features, `dumber` is simple yet flexible. By giving back control to you, `dumber` stays out of your way. You write your tasks in gulp, `dumber` is only one small step in your task `.pipe(dr())`.
 
 
