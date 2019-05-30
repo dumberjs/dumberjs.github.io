@@ -20,7 +20,7 @@ You will be prompted to provide a project name and few selections to generate a 
 
 Then you can start a dev server in the project with:
 ```sh
-npm run started
+npm run start
 ```
 
 ## Design of dumber
