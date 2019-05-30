@@ -25,14 +25,12 @@ npm run started
 
 ## Design of dumber
 
-Before future browsers + ESM (ECMAScript modules) bury all JavaScript bundlers, we still need a JavaScript bundler to ship SPA.
-
 There is a trend in industry, a trend I dislike, to offer all-in-one solution. Almost every other bundlers do transpiling, minimization, dev server, and much more.
 
 `dumber` is my attempt to follow the old school UNIX philosophy: do one thing, and do it well. No transpiling, no minimization, no dev server...
 
-For other all-in-one bundlers, they are super easy to get started with demo and small scale app. But for every practical real world app, it's inevitable for developers to customise the build and deploy tasks. Once you hit the boundaries of all-in-one solutions, it becomes harder and harder to something they didn't offer.
+For other all-in-one bundlers, they are super easy to get started with small app. But for every real world app, it's inevitable for developers to customise the build and deploy tasks. Once you hit the boundaries of all-in-one solutions, it becomes harder and harder to something they didn't offer.
 
-`dumber` only does one thing, to pack js/html/css resources into js bundle files. By giving up so many unneeded features, `dumber` is simple but extremely flexible. By giving back control to the developer, `dumber` stays out your way. You write your build/deploy tasks in gulp, `dumber` is only one small step in your task `.pipe(dr())`.
+`dumber` only does one thing, to pack resources into bundles. By giving up those unneeded features, `dumber` is simple yet flexible. By giving back control to the developer, `dumber` stays out of your way. You write the build/deploy tasks in gulp, `dumber` is only one small step in your task `.pipe(dr())`.
 
-Beside this design difference, there is one more unique offering: **`dumber` uses AMD module format with a modern AMD loader [`dumber-module-loader`](//github.com/dumberjs/dumber-module-loader).** We will explore more of it in following pages.
+
