@@ -14,7 +14,7 @@ Let's scaffold a front-end SPA project using dumber bundler. We use ["makes"](ht
 npx makes dumberjs
 ```
 
-![makes dumberjs](https://makesjs.github.io/makes/assets/makes-dumberjs.gif)
+![makes dumberjs](https://makesjs.github.io/assets/makes-dumberjs.gif)
 
 You will be prompted to provide a project name and few selections to generate a front-end project using `Aurelia`, `React`, or `Vue` framework.
 
