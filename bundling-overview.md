@@ -37,7 +37,7 @@ In fact, `dumber` doesn't know, doesn't even need to know, your entry module.
 2. `dumber` only traces and packs all of them plus required npm packages together.
 3. To `dumber`, entry module is something needed to be known at app running time, not bundling time.
 
-The entry module can be marked in html file using RequireJS way. By default, `dumber` treats `src/` as the base url of local modules, the module name for `src/main.ts` is `main`, the module name for `src/foo/bar.js` is `foo/bar`. Following example uses `src/main.ts` as the entry file.
+The entry module can be marked in html file using RequireJS way. By default, `dumber` treats `src/` as the source folder of local source files, the module name for `src/main.ts` is `main`, the module name for `src/foo/bar.js` is `foo/bar`. Following example uses `src/main.ts` as the entry file.
 
 ```html
 <script src="dist/entry-bundle.js" data-main="main"></script>
