@@ -3,7 +3,7 @@ layout: default
 title: Bundling Overview
 nav_order: 3
 description: Overview on bundling
-permalink: /bundling
+permalink: /bundling-overview
 ---
 
 # Bundling
