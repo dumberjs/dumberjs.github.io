@@ -64,4 +64,4 @@ From the new project created by `npx makes dumberjs`, you can see we used few co
 ## Start bundling
 
 1. [Bundling Overview](bundling-overview)
-2. TBD...
+2. [Resources](resources)
