@@ -6,7 +6,7 @@ description: Overview on bundling
 permalink: /bundling-overview
 ---
 
-# Bundling
+# Bundling Overview
 
 Before we show you various options of `dumber`, let's have a better overview on `dumber`'s unusual approach.
 
