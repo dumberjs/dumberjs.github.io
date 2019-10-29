@@ -34,17 +34,17 @@ Those json, html, js, css (gulp-sass turns scss vinyl file to css vinyl file) ar
 
 `dumber` transforms `.js` files into AMD modules.
 
-`dumber` understand JavasScript code in either CommonJS, ESM (esnext), AMD, or UMD format.
+`dumber` understands JavasScript code in either CommonJS, ESM (esnext), AMD, or UMD format.
 
 `dumber` is very dumb, it doesn't understand `.ts` (TypeScript) or `.coffee` (CoffeeScript) files. You need to use gulp-typescript or gulp-coffee to transpile those files into `.js` vinyl files before sending to `dumber`.
 
-> Not required by `dumber`, but we recommend TypeScript users to turn on `esModuleInterop` to avoid possible headaches. https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-7.html#support-for-import-d-from-cjs-from-commonjs-modules-with---esmoduleinterop
+Not required by `dumber`, but we recommend TypeScript users to turn on `esModuleInterop` to avoid possible headaches. https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-7.html#support-for-import-d-from-cjs-from-commonjs-modules-with---esmoduleinterop
 
 ## 2. wasm files
 
 `dumber` wraps `.wasm` files into AMD modules. You can just use `import foo from './foo.wasm';` in your code.
 
-> wasm is bundled in JavaScript bundle file under base64 encoding.
+wasm is bundled in JavaScript bundle file under base64 encoding.
 
 ## 3. json files
 
@@ -70,7 +70,7 @@ Similar to js files, `dumber` doesn't understand `.scss` or `.less` files. You n
 
 If your source file is `foo.scss`, you can use either `import './foo.css';` or `import './foo.scss';`. Recommend you to use `import './foo.scss';`, as it's least surprising, and compatible with test frameworks Jest and AVA running in Nodejs environment.
 
-> The real bundled module id is `foo.css` as it is the only file `dumber` saw (after gulp-sass processed it). dumber-module-loader actually resolves module `foo.scss` to `foo.css` at runtime.
+The real bundled module id is `foo.css` as it is the only file `dumber` saw (after gulp-sass processed it). dumber-module-loader actually resolves module id `foo.scss` to `foo.css` at runtime.
 
 ## 5. all other files
 
@@ -108,4 +108,3 @@ function build() {
     .pipe(gulp.dest('dist'));
 }
 ```
-
