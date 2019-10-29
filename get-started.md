@@ -45,7 +45,8 @@ function build() {
     gulp.src('src/**/*.js').pipe(babel()),
     gulp.src('src/**/*.scss').pipe(sass())
   )
-  .pipe(dr()) // Here is dumber doing humble bundling.
+  // Here is dumber doing humble bundling.
+  .pipe(dr())
   .pipe(gulp.dest('dist'));
 }
 ```
