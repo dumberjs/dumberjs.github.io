@@ -44,7 +44,7 @@ Not required by `dumber`, but we recommend TypeScript users to turn on `esModule
 
 `dumber` wraps `.wasm` files into AMD modules. You can just use `import foo from './foo.wasm';` in your code.
 
-wasm is bundled in JavaScript bundle file under base64 encoding.
+wasm is bundled inside final JavaScript bundle file under base64 encoding.
 
 ## 3. json files
 
