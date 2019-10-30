@@ -1,0 +1,20 @@
+---
+layout: default
+title: Options
+nav_order: 5
+permalink: /options
+has_children: true
+---
+
+# Options
+
+gulp-dumber supports various options.
+
+```js
+const dumber = require('gulp-dumber');
+const dr = dumber({
+  // src folder is by default "src".
+  src: 'src',
+  // Other options
+});
+```

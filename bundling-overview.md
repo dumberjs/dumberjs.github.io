@@ -2,7 +2,6 @@
 layout: default
 title: Bundling Overview
 nav_order: 3
-description: Overview on bundling
 permalink: /bundling-overview
 ---
 
@@ -59,3 +58,11 @@ Or you can explicitly start any module (or a list of modules).
 ```
 
 > Note: `dumber` uses [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader). This AMD module loader inherited many RequireJS features and APIs. The two examples above use standard RequireJS feature which `dumber-module-loader` supports.
+
+## No multi-verions of same npm package
+
+This is an important difference between `dumber` and the other bundlers. `dumber` didn't exactly follow Nodejs module resolution, it doesn't support multiple versions of same npm package. When there is a version conflict in some depended npm package, `dumber` simply bundles the top level `node_modules/a-npm-package/` version which is most common version in your app's dependencies tree.
+
+This simplified approach has both good and bad parts.
+* The good part is `dumber` doesn't have duplicated npm package.
+* The bad part is `dumber` doesn't support duplicated npm package.

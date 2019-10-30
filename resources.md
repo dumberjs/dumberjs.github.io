@@ -2,7 +2,6 @@
 layout: default
 title: Resources
 nav_order: 4
-description: Learn how resources are handled in dumber bundler
 permalink: /resources
 ---
 
@@ -77,6 +76,10 @@ The real bundled module id is `foo.css` as it is the only file `dumber` saw (aft
 All unknown files are treated as text modules. The includes html files.
 
 This means `dumber` cannot bundle binary files like jpeg pictures. (`wasm` is the only binary format `dumber` accepts.)
+
+## 6. npm files
+
+npm files are not explicitly added to gulp stream. `dumber` automatically brings in the needed npm files based on code tracing.
 
 ## About gulp stream
 
