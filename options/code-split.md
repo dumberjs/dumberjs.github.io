@@ -79,7 +79,7 @@ codeSplit: function(moduleId, packageName) {
 
 ## Circular Dependency
 
-CommonJS and ESM (esnext) module format support circular dependencies. The reference AMD module loader: RequireJS cannot support all scenarios of circular dependencies. Neither are many other AMD loader implementations.
+CommonJS and ESM (esnext) module formats support circular dependencies. The reference AMD module loader RequireJS cannot support all scenarios of circular dependencies. Neither are many other AMD loader implementations.
 
 dumber-module-loader fully supports circular dependencies, as long as they are in one bundle file (so that circular dependencies can be resolved synchronously).
 
