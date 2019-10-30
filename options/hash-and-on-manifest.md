@@ -20,13 +20,13 @@ hash: false
 hash: process.env.NODE_ENV === 'production'
 ```
 
-`dumber` implemented this feature instead of leaving it to gulp-hash. The reason is that RequireJS config (in the end of entry bundle file) needs to know the exact bundle names.
+`dumber` implemented this feature instead of leaving it to gulp-hash. The reason is that RequireJS config (in the end of entry bundle file) needs to know the exact bundle file names.
 
 When turned on, a bundle file name `entry-bundle.js` will become `entry-bundle.01af123b1f13a51c4c8b458656da47b3.js`.
 
 ## onManifest callback
 
-When hashed bundle files were generated, user needs to somehow update the app index html page with the latest entry bundle JavaScript file name. This is where onManifest callback is called.
+When hashed bundle files were generated, user needs to somehow update the app index html page with the latest entry bundle file name. This is where onManifest callback is called.
 
 ```js
 onManifest: function(filenameMap) {
@@ -44,4 +44,5 @@ onManifest: function(filenameMap) {
 }
 ```
 
+The above example use `_index.html` as the template for the resulting `index.html` file.
 The updated `index.html` file needs to be deployed along with all JavaScript bundle files.
