@@ -37,7 +37,7 @@ Here are few examples to show case the flexibility.
 ## Separate local files from npm packages.
 
 1. Bundle all local sources in `app-bundle.js`.
-2. Bundle all npm dependencies in `entry-bundle.js`.
+2. Bundle all npm packages in `entry-bundle.js`.
 
 ```js
 codeSplit: function(moduleId, packageName) {
@@ -49,7 +49,7 @@ codeSplit: function(moduleId, packageName) {
 
 1. Bundle all local common files in `app-bundle.js`.
 2. Assume the app has dedicated folders for every routes, bundle the routes into separate bundles, name after the route name.
-3. Bundle all npm dependencies in `entry-bundle.js`.
+3. Bundle all npm packages in `entry-bundle.js`.
 
 ```js
 codeSplit: function(moduleId, packageName) {
@@ -62,12 +62,12 @@ codeSplit: function(moduleId, packageName) {
 }
 ```
 
-## Use dedicated bundles for few big npm dependencies.
+## Use dedicated bundles for few big npm packages.
 
 1. Bundle all local sources in `app-bundle.js`.
 2. Bundle codemirror npm package to `codemirror-bundle.js`.
 2. Bundle all npm packages starts with "aurelia-" to `aurelia-bundle.js`.
-4. Bundle the other npm dependencies in `entry-bundle.js`.
+4. Bundle the other npm packages in `entry-bundle.js`.
 
 ```js
 codeSplit: function(moduleId, packageName) {
