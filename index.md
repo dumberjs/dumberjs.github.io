@@ -16,7 +16,7 @@ A dumb JavasScript bundler for Single Page Application, dumber than you and me.
 
 ---
 
-`dumber` does only one thing (bundle resources), and does it well.
+`dumber` does only one thing (bundling resources), and does it well.
 
 * **no transpiling**, because `gulp-babel` and `gulp-typescript` take care of that.
 * **no minimization**, because `gulp-terser` takes care of that.
