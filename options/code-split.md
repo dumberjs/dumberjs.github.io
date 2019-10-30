@@ -21,13 +21,13 @@ With the help from an AMD module loader, dumber-module-loader, the code split is
 The optional codeSplit callback is called for every single module, it takes two arguments:
 
 1. moduleId:
-  * For local src file "src/foo/bar.js", the module id is "foo/bar"
-  * For local src file "src/foo/bar.css" (or any other non-js file), the module id is "foo/bar.css"
-  * For npm package file "node_modules/foo/bar.js", the module id is "foo/bar"
+  * For local src file `src/foo/bar.js`, the module id is `foo/bar`
+  * For local src file `src/foo/bar.css` (or any other non-js file), the module id is `foo/bar.css`
+  * For npm package file `node_modules/foo/bar.js`, the module id is `foo/bar`
 2. packageName:
   * For any local src file, the package name is undefined
-  * For npm package file "node_modules/foo/bar.js", the package name is "foo"
-  * For npm package file "node_modules/@scoped/foo/bar.js", the package name is "@scoped/foo"
+  * For npm package file `node_modules/foo/bar.js`, the package name is `foo`
+  * For npm package file `node_modules/@scoped/foo/bar.js`, the package name is `@scoped/foo`
 
 It should return a bundle name for current module, or return nothing which implicitly means the [entry bundle](./entry-bundle).
 
