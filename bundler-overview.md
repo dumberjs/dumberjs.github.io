@@ -68,4 +68,4 @@ This simplified approach is a design decision with both Pros and Cons.
 * Pros: `dumber` doesn't bundle duplicated npm package.
 * Cons: `dumber` doesn't bundle duplicated npm package.
 
-In our opinion, the Pros is more important to us.
+In our opinion, the Pros is more important.
