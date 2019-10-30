@@ -1,7 +1,7 @@
 ---
 layout: default
 title: onRequire
-nav_order: 8
+nav_order: 10
 permalink: /options/on-require
 parent: Options
 ---
