@@ -64,7 +64,7 @@ Or you can explicitly start any module (or a list of modules).
 
 This is an important difference between `dumber` and the other bundlers. `dumber` didn't exactly follow Nodejs module resolution, it doesn't support multiple versions of same npm package. When there is a version conflict in some depended npm package, `dumber` simply bundles the top level `node_modules/a-npm-package/` version which is the most common version in your app's dependencies tree.
 
-This simplified approach is design decision with both Pros and Cons.
+This simplified approach is a design decision with both Pros and Cons.
 * Pros: `dumber` doesn't bundle duplicated npm package.
 * Cons: `dumber` doesn't bundle duplicated npm package.
 
