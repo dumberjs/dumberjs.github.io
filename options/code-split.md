@@ -29,7 +29,7 @@ The optional codeSplit callback is called for every single module, it takes two 
   * For npm package file "node_modules/foo/bar.js", the package name is "foo"
   * For npm package file "node_modules/@scoped/foo/bar.js", the package name is "@scoped/foo"
 
-It should return a bundle name for current module, or return nothing which implicitly means the [entry bundle](options/entry-bundle).
+It should return a bundle name for current module, or return nothing which implicitly means the [entry bundle](./entry-bundle).
 
 Here are few examples to show case the flexibility.
 

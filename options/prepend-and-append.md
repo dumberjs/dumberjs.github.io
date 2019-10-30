@@ -14,7 +14,7 @@ parent: Options
 prepend: []
 ```
 
-Refer to [entry bundle](options/entry-bundle), prepend is an optional array of strings, to be prepended before booting up AMD module loader.
+Refer to [entry bundle](./entry-bundle), prepend is an optional array of strings, to be prepended before booting up AMD module loader.
 
 This option support an aliased name "prepends".
 

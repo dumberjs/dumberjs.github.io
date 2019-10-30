@@ -24,7 +24,7 @@ The total code in core `dumber` is just 3.3K lines of JavasScript (includes [`du
 
 The minimum design of `dumber` actually gains enormous flexibility with existing tools in gulp. `dumber` downgrades bundling to be a tiny step in gulp pipeline, and let gulp to take the centre stage.
 
-There is no much to learn about `dumber` because there are not many features. Users need to learn [gulp](take the center spot). Gulp is the "shell". Your knowledge on gulp can be applied to the generic tasks beyond just bundling.
+There is no much to learn about `dumber` because there are not many features. Users need to learn [gulp](https://gulpjs.com). Gulp is the "shell". Your knowledge on gulp can be applied to the generic tasks beyond just bundling.
 
 ## No main (aka entry) module
 

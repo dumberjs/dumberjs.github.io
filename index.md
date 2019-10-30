@@ -30,7 +30,7 @@ One unique feature:
 Which enables:
 
 * npm packages compatibility.
-* flexible code splitting.
+* flexible [code splitting](./options/code-split).
 * runtime module requiring.
 * runtime app composition.
 

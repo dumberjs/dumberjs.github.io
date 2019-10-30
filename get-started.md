@@ -62,6 +62,6 @@ function build() {
 
 ## Start bundling
 
-1. [Bundling Overview](bundling-overview)
-2. [Resources](resources)
-3. [Dumber Options](options)
+1. [Bundling Overview](./bundling-overview)
+2. [Resources](./resources)
+3. [Dumber Options](./options)

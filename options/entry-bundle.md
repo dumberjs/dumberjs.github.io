@@ -46,4 +46,4 @@ requirejs.config({
   * All appends are **in** an AMD environment, because it's after booting up the AMD module loader.
   * You can use appends for some flexible customisation.
 
-When code splitting is in use, other bundle files only contains part 3: user code modules and npm package modules in AMD module format.
+When code splitting is in use, other bundle files only contain part 3: user code modules and npm package modules in AMD module format.
