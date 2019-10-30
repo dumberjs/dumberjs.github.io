@@ -62,6 +62,7 @@ function build() {
 
 ## Start bundling
 
-1. [Bundling Overview](./bundling-overview)
+1. [Bundler Overview](./bundler-overview)
 2. [Resources](./resources)
-3. [Dumber Options](./options)
+3. [Options](./options)
+4. [Runtime App Composition](./runtime-app-composition)

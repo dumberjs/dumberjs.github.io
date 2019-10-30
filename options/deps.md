@@ -14,7 +14,7 @@ deps: []
 
 An optional array of dependencies. User can use this option to forcefully add explicit dependencies, or override default location or main file of a npm package.
 
-This option support an aliased name "dependencies".
+This option supports an aliased name "dependencies".
 
 # Supported dependency input
 

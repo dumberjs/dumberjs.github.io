@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Bundling Overview
+title: Bundler Overview
 nav_order: 3
-permalink: /bundling-overview
+permalink: /bundler-overview
 ---
 
-# Bundling Overview
+# Bundler Overview
 
-Before we show you various options of `dumber`, let's have a better overview on `dumber`'s unusual approach.
+Let's start with a better understanding of bundler.
 
 ## Demystify bundling
 
@@ -16,21 +16,22 @@ Don't let those huge bundlers terrify you. The core business of a bundler is jus
 1. Trace. Static analysis on code, find dependencies, bring them all in.
 2. Pack. Concatenate files together.
 
-Why those bundlers are huge? Because they added lots of features on top of the core business, like transpiling, dev server, minimization, ...
+Why they are huge? Because they added lots of features on top of the core business, like transpiling, dev server, minimization, ...
 
+## Dumber is dumb
 `dumber` does none of those, it's all about trace and pack, aka bundling.
 
-The total code in core `dumber` is just 3.3K lines of JavasScript (includes [`dumber`](https://github.com/dumberjs/dumber), [`gulp-dumber`](https://github.com/dumberjs/gulp-dumber), [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader), [`modify-code`](https://github.com/dumberjs/modify-code), and [`ast-matcher`](https://github.com/dumberjs/ast-matcher)). There are additional 200 lines in [`aurelia-deps-finder`](https://github.com/dumberjs/aurelia-deps-finder) to support classic [Aurelia](https://aurelia.io) v1 in dumber.
+The total code in core `dumber` is just 3.3K lines of JavasScript (includes [`dumber`](https://github.com/dumberjs/dumber), [`gulp-dumber`](https://github.com/dumberjs/gulp-dumber), [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader), [`modify-code`](https://github.com/dumberjs/modify-code), and [`ast-matcher`](https://github.com/dumberjs/ast-matcher)). There are additional 200 lines in [`aurelia-deps-finder`](https://github.com/dumberjs/aurelia-deps-finder) to support classic [Aurelia](https://aurelia.io) in dumber.
 
-The minimum design of `dumber` actually gains enormous flexibility with existing tools in gulp. `dumber` downgrades bundling to be a tiny step in gulp pipeline, and let gulp to take the centre stage.
+`dumber` downgrades bundling to be a tiny step in gulp pipeline, and let gulp to take the centre stage. This humble design gained enormous flexibility with existing tools in gulp.
 
-There is no much to learn about `dumber` because there are not many features. Users need to learn [gulp](https://gulpjs.com). Gulp is the "shell". Your knowledge on gulp can be applied to the generic tasks beyond just bundling.
+There is not much to learn about `dumber` because of the small feature set. Users need to learn [gulp](https://gulpjs.com). Gulp is the "shell". Your knowledge on gulp can be applied to the generic tasks beyond just bundling.
 
 ## No main (aka entry) module
 
-Every other popular bundlers start bundling with a main module such as `src/main.ts`. They recursively trace and bring in all other files. It's inevitable for them to support transpiling, because they need to performing transpiling when bringing in new raw file.
+Every other popular bundlers start bundling with a main module such as `src/main.ts`. They recursively trace and bring in all other files. It's inevitable for them to support transpiling, because they need to perform transpiling when bringing in new raw file.
 
-`dumber` doesn't do transpiling. `dumber` doesn't bring in raw local file automatically. In the build task showed in previous page, you do proper transpiling on local files first, then feed them to `dumber`.
+`dumber` doesn't do transpiling. In the build task showed in previous page, you do proper transpiling on local files first, then feed them to `dumber`.
 
 `dumber` only automatically brings in required npm package files. That assumes that all npm package files require no transpiling. For your local source files, `dumber` only double checks inner dependency. It warns you when a local dependency is not fulfilled (for example, `src/app.js` requires module `./foo`, but file `src/foo.js` was not fed to `dumber`).
 
@@ -38,7 +39,7 @@ Every other popular bundlers start bundling with a main module such as `src/main
 
 In fact, `dumber` doesn't even need to know the entry module of the app.
 
-1. You feed all your transpiled local sources files `src/**/*.{js,...}` to `dumber`.
+1. Feed all the transpiled local sources files `src/**/*.{js,...}` to `dumber`.
 2. `dumber` traces and packs all of them plus required npm packages.
 3. To `dumber`, the entry module needs to be identified at app running time, but not bundling time.
 
@@ -59,7 +60,7 @@ Or you can explicitly start any module (or a list of modules).
 
 > Note: `dumber` uses [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader). This AMD module loader inherited many RequireJS features and APIs. The two examples above use standard RequireJS feature which `dumber-module-loader` supports.
 
-## No multi-verions of same npm package
+## No multi-versions of same npm package
 
 This is an important difference between `dumber` and the other bundlers. `dumber` didn't exactly follow Nodejs module resolution, it doesn't support multiple versions of same npm package. When there is a version conflict in some depended npm package, `dumber` simply bundles the top level `node_modules/a-npm-package/` version which is most common version in your app's dependencies tree.
 

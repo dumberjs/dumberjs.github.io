@@ -16,7 +16,7 @@ prepend: []
 
 Refer to [entry bundle](./entry-bundle), prepend is an optional array of strings, to be prepended before booting up AMD module loader.
 
-This option support an aliased name "prepends".
+This option supports an aliased name "prepends".
 
 You can supply either a local file path, or piece of code directly.
 
@@ -41,8 +41,8 @@ prepend: [
 ```js
 append: []
 ```
-Refer to [entry bundle](options/entry-bundle), append is an optional array of strings, to be appended after booting up AMD module loader and after RequireJS config.
+Refer to [entry bundle](./entry-bundle), append is an optional array of strings, to be appended after booting up AMD module loader and after RequireJS config.
 
-This option support an aliased name "appends".
+This option supports an aliased name "appends".
 
 It supports exactly same input as prepend.

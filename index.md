@@ -32,7 +32,7 @@ Which enables:
 * npm packages compatibility.
 * flexible [code splitting](./options/code-split).
 * runtime module requiring.
-* runtime app composition.
+* [runtime app composition](./runtime-app-composition).
 
 ## License
 
