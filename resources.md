@@ -83,7 +83,7 @@ npm files are not explicitly added to gulp stream. `dumber` automatically brings
 
 ## About gulp stream
 
-In the gulp code sample, [merge2](https://github.com/teambition/merge2) is used to merge multiple gulp stream. Note gulp actually supports adding streams to pipeline, it was preprocessors (babel and sass) we need to isolate. Following code sample uses [gulp-if](https://github.com/robrich/gulp-if) instead of merge2 to do the same thing.
+In the gulp code sample, [merge2](https://github.com/teambition/merge2) is used to merge multiple gulp streams. Note gulp actually supports adding streams to pipeline, it was preprocessors (babel and sass) we need to isolate. Following code sample uses [gulp-if](https://github.com/robrich/gulp-if) instead of merge2 to do the same thing.
 
 ```js
 function build() {
