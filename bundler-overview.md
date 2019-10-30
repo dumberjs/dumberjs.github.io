@@ -7,7 +7,7 @@ permalink: /bundler-overview
 
 # Bundler Overview
 
-Let's start with a better understanding of bundler.
+Let's start with a better understanding on bundler.
 
 ## Demystify bundling
 
