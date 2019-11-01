@@ -137,3 +137,8 @@ RequireJS doesn't support absolute module id starting with `../` (it confuses Re
 
 [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) supports absolute module id starting with `../`. This kind of module id is called "above-surface" module id. It's designed to allow dumber to flexibly import files out of [src path](./options/src).
 
+## Two module spaces
+
+[`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) separates local sources and npm packages into two module spaces: `user` and `package`. This is designed to solve one RequireJS problem, the local file `src/util.js` with module id `util` overshadows npm core package `util`.
+
+The module spaces are totally transparent to the users of `dumber` bundler. If you are interested, read more at https://github.com/dumberjs/dumber-module-loader.
