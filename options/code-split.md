@@ -14,9 +14,9 @@ codeSplit: function(moduleId, packageName) {
 }
 ```
 
-With the help from an AMD module loader, dumber-module-loader, the code split is intuitive and flexible in `dumber`.
+With the help from an AMD module loader, dumber-module-loader, the code split is intuitive and flexible.
 
-`dumber` doesn't support special instructions in source code to tell the bundler how to split code (or so called chunks). `dumber` supports arbitrary code split regardless of the code.
+`dumber` doesn't support special instructions in the source code to inform the bundler how to split code (or so called chunks). `dumber` supports arbitrary code split regardless of the code.
 
 The optional codeSplit callback is called for every single module, it takes two arguments:
 
@@ -67,7 +67,7 @@ codeSplit: function(moduleId, packageName) {
 1. Bundle all local sources in `app-bundle.js`.
 2. Bundle codemirror npm package to `codemirror-bundle.js`.
 2. Bundle all npm packages starts with "aurelia-" to `aurelia-bundle.js`.
-4. Bundle the other npm packages in `entry-bundle.js`.
+4. Bundle all other npm packages in `entry-bundle.js`.
 
 ```js
 codeSplit: function(moduleId, packageName) {
