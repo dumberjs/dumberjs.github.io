@@ -18,21 +18,21 @@ A dumb JavasScript bundler for Single Page Application, dumber than you and me.
 
 `dumber` does only one thing (bundling resources), and does it well.
 
-* **no transpiling**, because `gulp-babel` and `gulp-typescript` take care of that.
-* **no minimization**, because `gulp-terser` takes care of that.
-* **no dev server**, our scaffold uses [browser-sync](https://www.browsersync.io) as the dev server.
-* **not even write file**, because `gulp.dest()` takes care of that.
+* **No transpiling**, because `gulp-babel` and `gulp-typescript` take care of that.
+* **No minimization**, because `gulp-terser` takes care of that.
+* **No dev server**, our scaffold uses [browser-sync](https://www.browsersync.io) as the dev server.
+* **Not even write file**, because `gulp.dest()` takes care of that.
 
 One unique feature:
 
-* a modern AMD module loader [`dumber-module-loader`](//github.com/dumberjs/dumber-module-loader).
+* A modern AMD module loader [`dumber-module-loader`](//github.com/dumberjs/dumber-module-loader).
 
 Which enables:
 
 * npm packages compatibility.
-* flexible [code splitting](./options/code-split).
-* runtime module requiring.
-* [runtime app composition](./runtime-app-composition).
+* Flexible [code splitting](./options/code-split).
+* Runtime module requiring.
+* [Runtime app composition](./runtime-app-composition).
 
 ## License
 
