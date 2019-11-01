@@ -54,4 +54,4 @@ deps: [ {name: 'foo', location: 'node_modules/bar'} ]
 
 This will use npm package `bar` as if it's `foo`.
 
-Note this changes the [module id](../resources/above-surface-module-id) assignment. File `node_modules/bar/index.js` will now be assigned with module id `foo/index` instead of `bar/index`.
+Note this changes the [module id](../resources#above-surface-module-id) assignment. File `node_modules/bar/index.js` will now be assigned with module id `foo/index` instead of `bar/index`.
