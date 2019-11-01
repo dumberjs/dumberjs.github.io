@@ -24,7 +24,7 @@ Because the entry bundle is the starting point of your app, there is some specia
   * All prepends contents are **before** initialising AMD loader.
   * You can load up legacy JavaScript libs in prepends.
 
-2. Then dumber-module-loader brings up AMD module loader.
+2. Then [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) brings up AMD module loader.
   * From this point onwards, global `define()`, `require()` and `requirejs()` functions are defined.
   * All code after this point are in AMD environment.
 
@@ -32,7 +32,7 @@ Because the entry bundle is the starting point of your app, there is some specia
   * `dumber` wraps all JavaScript modules in AMD module format.
 
 4. A RequireJS config.
-  * This config is important for enabling runtime remote bundle loading and remote module loading. It tells dumber-module-loader where to find additional bundle files or additional modules.
+  * This config is important for enabling runtime remote bundle loading and remote module loading. It tells [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) where to find additional bundle files or additional modules.
   * It inherited the same config method name from RequireJS.
 ```js
 requirejs.config({

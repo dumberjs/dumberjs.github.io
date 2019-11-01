@@ -14,7 +14,7 @@ codeSplit: function(moduleId, packageName) {
 }
 ```
 
-With the help from an AMD module loader, dumber-module-loader, the code split is intuitive and flexible.
+With the help from an AMD module loader, [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader), the code split is intuitive and flexible.
 
 `dumber` doesn't support special instructions in the source code to inform the bundler how to split code (or so called chunks). `dumber` supports arbitrary code split regardless of the code.
 
@@ -81,6 +81,6 @@ codeSplit: function(moduleId, packageName) {
 
 CommonJS and ESM (esnext) module formats support circular dependencies. The reference AMD module loader RequireJS cannot support all scenarios of circular dependencies. Neither are many other AMD loader implementations.
 
-dumber-module-loader fully supports circular dependencies, as long as they are in one bundle file (so that circular dependencies can be resolved synchronously).
+[`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) fully supports circular dependencies, as long as they are in one bundle file (so that circular dependencies can be resolved synchronously).
 
 For this reason, although `dumber`'s code split supports separating the files of one npm package into multiple bundle files, it's recommended not doing so.

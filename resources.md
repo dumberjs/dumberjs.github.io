@@ -56,7 +56,7 @@ For Nodejs compatibility, json modules are following Nodejs sematics, the result
 
 ## 4. css files
 
-`dumber` wraps `.css` files into simple AMD text modules. By default, `dumber` also ships a css extension plugin for dumber-module-loader to inject the css into HTML head when you import the css file. User can opt-out the default behaviour with `injectCss: false`.
+`dumber` wraps `.css` files into simple AMD text modules. By default, `dumber` also ships a css extension plugin for [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) to inject the css into HTML head when you import the css file. User can opt-out the default behaviour with `injectCss: false`.
 
 ```js
 const dr = dumber({
@@ -69,7 +69,7 @@ Similar to js files, `dumber` doesn't understand `.scss` or `.less` files. You n
 
 If your source file is `foo.scss`, you can use either `import './foo.css';` or `import './foo.scss';`. Recommend you to use `import './foo.scss';`, as it's least surprising, and compatible with test frameworks Jest and AVA running in Nodejs environment.
 
-The real bundled module id is `foo.css` as it is the only file `dumber` saw (after gulp-sass processed it). dumber-module-loader actually resolves module id `foo.scss` to `foo.css` at runtime.
+The real bundled module id is `foo.css` as it is the only file `dumber` saw (after gulp-sass processed it). [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) actually resolves module id `foo.scss` to `foo.css` at runtime.
 
 ## 5. all other files
 
@@ -111,3 +111,29 @@ function build() {
     .pipe(gulp.dest('dist'));
 }
 ```
+
+## Module id
+
+`dumber` assigns a module id for every resource (file) it bundled.
+
+## Module id for local source files
+
+Module id for a local source is relative to [src path](./options/src) (default to `"src"`).
+* For local src file `src/foo/bar.js`, the module id is `foo/bar`.
+* For local src file `src/foo/bar.css` (or any other non-js file), the module id is `foo/bar.css`.
+
+## Module id for npm package file
+
+Module id for a npm package file starts with npm package name.
+
+* For npm package file `node_modules/foo/bar.js`, the module id is `foo/bar`.
+* For scoped npm package file `node_modules/@scoped/foo/bar.js`, the module id is `@scoped/foo/bar`.
+
+## Above-surface module id
+
+When a local file is out of [src path](./options/src), for example `foo/bar.js` in folder `foo/`, not folder `src/`, the module id assigned will be `../foo/bar` as if it's relative to `src/` folder.
+
+RequireJS doesn't support absolute module id starting with `../` (it confuses RequireJS as relative module id).
+
+[`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) supports absolute module id starting with `../`. This kind of module id is called "above-surface" module id. It's designed to allow dumber to flexibly import files out of [src path](./options/src).
+
