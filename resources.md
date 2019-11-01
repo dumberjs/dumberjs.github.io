@@ -12,6 +12,9 @@ Resources are the gulp vinyl files you throw to `dumber`.
 Use again the example showed in [Get Started](get-started).
 
 ```js
+const dumber = require('gulp-dumber');
+const dr = dumber({/* ... */});
+
 function build() {
   return merge2(
     gulp.src('src/**/*.json'),
@@ -20,6 +23,7 @@ function build() {
     gulp.src('src/**/*.scss').pipe(sass())
   )
   // Here is dumber doing humble bundling.
+  // The extra call `dr()` is designed to cater watch mode.
   .pipe(dr())
   .pipe(gulp.dest('dist'));
 }
@@ -86,6 +90,9 @@ npm files are not explicitly added to gulp stream. `dumber` automatically brings
 In the gulp code sample, [merge2](https://github.com/teambition/merge2) is used to merge multiple gulp streams. Note gulp actually supports adding streams to pipeline, it was preprocessors (babel and sass) we need to isolate. Following code sample uses [gulp-if](https://github.com/robrich/gulp-if) instead of merge2 to do the same thing.
 
 ```js
+const dumber = require('gulp-dumber');
+const dr = dumber({/* ... */});
+
 function build() {
   return gulp.src('src/**/*.json')
     .pipe(gulp.src('src/**/*.html'))
@@ -94,6 +101,7 @@ function build() {
     .pipe(gulp.src('src/**/*.scss'))
     .pipe(gulpIf(file => file.extname === '.scss', sass()))
     // Here is dumber doing humble bundling.
+    // The extra call `dr()` is designed to cater watch mode.
     .pipe(dr())
     .pipe(gulp.dest('dist'));
 }
@@ -102,11 +110,15 @@ function build() {
 Or simply:
 
 ```js
+const dumber = require('gulp-dumber');
+const dr = dumber({/* ... */});
+
 function build() {
   return gulp.src('src/**/*.{json,html,js,scss}')
     .pipe(gulpIf(file => file.extname === '.js', babel()))
     .pipe(gulpIf(file => file.extname === '.scss', sass()))
     // Here is dumber doing humble bundling.
+    // The extra call `dr()` is designed to cater watch mode.
     .pipe(dr())
     .pipe(gulp.dest('dist'));
 }

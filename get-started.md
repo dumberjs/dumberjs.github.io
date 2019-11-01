@@ -37,6 +37,9 @@ For other all-in-one bundlers, they are super easy to get started with small app
 Take an example, if you created an new project with `npx makes dumberjs new-project -s aurelia,sass`, your `tasks/build.js` is logically similar to the following simplified snippet:
 
 ```js
+const dumber = require('gulp-dumber');
+const dr = dumber({/* ... */});
+
 function build() {
   return merge2(
     gulp.src('src/**/*.json'),
@@ -45,6 +48,7 @@ function build() {
     gulp.src('src/**/*.scss').pipe(sass())
   )
   // Here is dumber doing humble bundling.
+  // The extra call `dr()` is designed to cater watch mode.
   .pipe(dr())
   .pipe(gulp.dest('dist'));
 }
