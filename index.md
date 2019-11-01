@@ -16,12 +16,12 @@ A dumb JavasScript bundler for Single Page Application, dumber than you and me.
 
 ---
 
-`dumber` does only one thing (bundling resources), and does it well.
+`dumber` does only one thing, bundling resources, and does it well.
 
 * **No transpiling**, because `gulp-babel` and `gulp-typescript` take care of that.
 * **No minimization**, because `gulp-terser` takes care of that.
-* **No dev server**, our scaffold uses [browser-sync](https://www.browsersync.io) as the dev server.
-* **Not even write file**, because `gulp.dest()` takes care of that.
+* **No dev server**, our [scaffold](https://github.com/dumberjs/new) uses [browser-sync](https://www.browsersync.io) as the dev server.
+* **Not even writing file**, because `gulp.dest()` takes care of that.
 
 One unique feature:
 
