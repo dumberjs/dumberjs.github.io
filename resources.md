@@ -139,6 +139,6 @@ RequireJS doesn't support absolute module id starting with `../` (it confuses Re
 
 ## Two module spaces
 
-[`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) separates local sources and npm packages into two module spaces: `user` and `package`. This is designed to solve one RequireJS problem, the local file `src/util.js` with module id `util` overshadows npm core package `util`.
+[`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) separates local sources and npm packages into two module spaces: `user` and `package`. This is designed to solve one RequireJS problem: module id conflicts. For example, a local file `src/util.js` with assigned module id `util` overshadows npm core package `util`.
 
 The module spaces are totally transparent to the users of `dumber` bundler. If you are interested, read more at https://github.com/dumberjs/dumber-module-loader.
