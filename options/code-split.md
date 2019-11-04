@@ -62,6 +62,12 @@ codeSplit: function(moduleId, packageName) {
 }
 ```
 
+Note, when you have some [above-surface](../resources/above-surface-module-id) modules, they starts with `"../"`, so you would need:
+
+```js
+if (parts.length > 1 && parts[0] !== '..') return parts[0] + '-bundle';
+```
+
 ## Use dedicated bundles for few big npm packages.
 
 1. Bundle all local sources in `app-bundle.js`.
