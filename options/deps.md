@@ -55,3 +55,17 @@ deps: [ {name: 'foo', location: 'node_modules/bar'} ]
 This will use npm package `bar` as if it's `foo`.
 
 Note this changes the [module id](../resources#above-surface-module-id) assignment. File `node_modules/bar/index.js` will now be assigned with module id `foo/index` instead of `bar/index`.
+
+## Conditional dependency
+
+Similar to [prepend and append](./prepend-and-append), `dumber` ignores falsy values in deps.
+
+```js
+deps: [
+ process.env.NODE_ENV !== 'production' && 'aurelia-testing',
+ process.env.NODE_ENV !== 'production' && {
+   name: 'foo',
+   location: '../local/foo'
+ }
+]
+```
