@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Runtime App Composition
-nav_order: 6
+nav_order: 7
 permalink: /runtime-app-composition
 ---
 

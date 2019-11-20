@@ -69,4 +69,5 @@ function build() {
 1. [Bundler Overview](./bundler-overview)
 2. [Resources](./resources)
 3. [Options](./options)
-4. [Runtime App Composition](./runtime-app-composition)
+4. [NODE_ENV](./node-env)
+5. [Runtime App Composition](./runtime-app-composition)
