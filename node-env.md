@@ -15,10 +15,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 ```
 
-It will respect the `NODE_ENV` value captured at the time when the bundle files was created.
+It will respect the `NODE_ENV` value captured at the time when the bundle files were created.
 
-    npx gulp build
-    env NODE_ENV=production npx gulp build
+```bash
+npx gulp build
+env NODE_ENV=production npx gulp build
+```
 
 The two different builds will capture different `NODE_ENV` value in generated bundle files.
 
