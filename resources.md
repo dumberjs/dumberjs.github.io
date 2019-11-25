@@ -51,7 +51,7 @@ To put wasm inside text format bundle file, wasm is encoded in base64 string (wh
 
 See an example in [https://github.com/dumberjs/examples/tree/master/aurelia-esnext-scss-jasmine](https://github.com/dumberjs/examples/tree/master/aurelia-esnext-scss-jasmine).
 
-> Note: same as dealing with babel and TypeScript, `dumber` doesn't care how you compile the original source (like c or c++ source file) into wasm file. It's user's responsibility to handle the compilation (from c or other languages to wasm) in gulp pipeline. Note you need `import foo from './foo.wasm';` instead of `import foo from './foo.c';` because `dumber` has no idea that the final `foo.wasm` was compiled from `foo.c`.
+> Note: same as dealing with babel and TypeScript, `dumber` doesn't care how you compile the original source (like c or c++ source file) into wasm file. It's user's responsibility to handle the compilation (from c or other languages to wasm) in gulp pipeline. On top of that, user also needs `import foo from './foo.wasm';` instead of `import foo from './foo.c';`, because `dumber` has no idea that the final `foo.wasm` was compiled from `foo.c`.
 
 ## 3. json files
 
