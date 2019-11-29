@@ -9,4 +9,4 @@ permalink: /runtime-app-composition
 
 Doc WIP
 
-View example in [https://github.com/dumberjs/examples](https://github.com/dumberjs/examples).
+View example in [https://github.com/dumberjs/examples/tree/master/runtime-composition-aurelia](https://github.com/dumberjs/examples/tree/master/runtime-composition-aurelia).
