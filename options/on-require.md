@@ -52,7 +52,7 @@ If you use TypeScript, also add a ts-ignore to calm TypeScript compiler down.
 
 ```js
 // @ts-ignore TS2307
-import * as clientInfo from 'client-info.json';
+import clientInfo from 'client-info.json';
 ```
 
 By default, `dumber-module-loader` will try to load module `"client-info.json"` from [baseUrl](./base-url) (e.g. `http://your-server/dist/client-info.json`) which is the same folder that all your bundle files were deployed. Create a customised `client-info.json` for every deployment, then the app will load the per client config with the help of runtime AMD module loader.
