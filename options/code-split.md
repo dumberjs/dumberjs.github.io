@@ -89,4 +89,4 @@ CommonJS and ESM (esnext) module formats support circular dependencies. The refe
 
 [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) fully supports circular dependencies, as long as they are in one bundle file (so that circular dependencies can be resolved synchronously).
 
-For this reason, although `dumber`'s code split supports separating the files of one npm package into multiple bundle files, it's recommended not doing so.
+Circular dependency usually happens within one npm package. (It doesn't make sense for two npm packages to depend on each other.) For this reason, although `dumber`'s code split supports separating the internal files of one npm package into multiple bundle files, it's recommended not doing so.
