@@ -14,7 +14,7 @@ paths: {
 }
 ```
 
-Paths is an option for dumber-module-loader. Dumber bundler passes the option to dumber-module-loader config.
+Paths is an option for `dumber-module-loader`. `dumber` bundler passes the option to `dumber-module-loader` config.
 
 It's similar to original RequireJS paths option, but simplified.
 

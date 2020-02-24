@@ -66,7 +66,7 @@ With other bundler, you can achieve the same thing without an AMD module loader.
 
 > You may wonder how did AMD module loader make the asynchronous remote fetching works in synchronous semantics of the ESM import statement. The truth is that AMD module loader doesn't change the asynchronous nature of the remote fetching. The trick is that AMD module loader analyses the whole dependency tree, loads up all modules code (some synchronously and some asynchronously) but does not execute them yet. Only after all required dependencies are available, it then starts to execute the code. That's why when the module code runs, all dependencies can be resolved "synchronously".
 
-> When you deliberately ignore a module, dumber-module-loader will fetch it at runtime. The runtime fetch of missing module is related to [baseUrl](./base-url) (`/dist` by default). You can also use [paths](./paths) option to alter the behaviour.
+> When you deliberately ignore a module, `dumber-module-loader` will fetch it at runtime. The runtime fetch of missing module is related to [baseUrl](./base-url) (`/dist` by default). You can also use [paths](./paths) option to alter the behaviour.
 
 ## 2. Bundling additional dependencies for the missing module
 

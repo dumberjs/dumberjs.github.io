@@ -69,3 +69,30 @@ deps: [
  }
 ]
 ```
+
+## Lazy Main
+
+By default, explicit dependencies force `dumber` to bundle its main file. This is usually what you want.
+
+By sometimes, your code didn't use the main file but some other file in the npm package.
+
+For example, your code uses `lodash/map` (which resolves to `map.js` in `lodash` package), but you have a special modified lodash package.
+
+```js
+deps: [
+  {name: 'lodash', location: '../my-lodash'}
+]
+```
+
+This explicit dependency will force `dumber` not only bundle `map.js` of `lodash`, but all other files that `lodash` main file requires.
+
+To skip the main file, use `lazyMain: true`.
+
+```js
+deps: [
+  {name: 'lodash', location: '../my-lodash', lazyMain: true}
+]
+```
+
+> Note if you had this lazyMain dep in `dumber` config, but didn't require any `lodash` module (`lodash` or `lodash/some-module`) in your code, `dumber` would not bundle any `lodash` file.
+
