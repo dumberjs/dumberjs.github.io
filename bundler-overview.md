@@ -72,9 +72,12 @@ In our opinion, the Pros is more important.
 
 > This means your app could suffer runtime exception when some code expects a different incompatible version of a npm package. The recommendation is to keep your runtime dependencies small and avoid outdated 3rd party libraries.
 
-When you could find a common version in the duplicated npm package to work well with all other code, you can force the version in your app's package.json. For example, you have 3rd party libraries use mix of chalk v3 and chalk v2, and npm resolved the most common version to chalk v3. You can enforce `dumber` to bundle chalk v2 instead of chalk v3 into your app by forcing the top level npm package to chalk v2:
+When you could find a common version in the duplicated npm package to work well with all other code, you can force that version in your app's package.json.
+
+For example, you have 3rd party libraries use mix of chalk v3 and chalk v2, and npm resolved the most common version to chalk v3. You can enforce `dumber` to bundle chalk v2 instead of chalk v3 into your app by forcing the top level npm package to chalk v2:
 
 ```bash
+# Install chalk v2 and add it to package.json
 npm install chalk@2
 ```
 
