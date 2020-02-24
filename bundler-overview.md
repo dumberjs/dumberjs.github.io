@@ -58,7 +58,7 @@ Or you can explicitly start any module (or a list of modules).
 <script>requirejs(['main']);</script>
 ```
 
-> Note: `dumber` uses [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader). This AMD module loader inherited many RequireJS features and APIs. The two examples above use standard RequireJS feature which `dumber-module-loader` supports.
+> `dumber` uses [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader). This AMD module loader inherited many RequireJS features and APIs. The two examples above use standard RequireJS feature which `dumber-module-loader` supports.
 
 ## No multi-versions of same npm package
 
@@ -69,3 +69,12 @@ This simplified approach is a design decision with both Pros and Cons.
 * Cons: `dumber` doesn't bundle duplicated npm package.
 
 In our opinion, the Pros is more important.
+
+> This means your app could suffer runtime exception when some code expects a different incompatible version of a npm package. The recommendation is to keep your runtime dependencies small and avoid outdated 3rd party libraries.
+
+When you could find a common version in the duplicated npm package to work well with all other code, you can force the version in your app's package.json. For example, you have 3rd party libraries use mix of chalk v3 and chalk v2, and npm resolved the most common version to chalk v3. You can enforce `dumber` to bundle chalk v2 instead of chalk v3 into your app by forcing the top level npm package to chalk v2:
+
+```bash
+npm install chalk@2
+```
+

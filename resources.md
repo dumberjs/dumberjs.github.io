@@ -51,7 +51,7 @@ To put wasm inside text format bundle file, wasm is encoded in base64 string (wh
 
 See an example in [https://github.com/dumberjs/examples/tree/master/aurelia-esnext-scss-jasmine](https://github.com/dumberjs/examples/tree/master/aurelia-esnext-scss-jasmine).
 
-> Note: same as dealing with babel and TypeScript, `dumber` doesn't care how you compile the original source (like c or c++ source file) into wasm file. It's user's responsibility to handle the compilation (from c or other languages to wasm) in gulp pipeline. On top of that, user also needs `import foo from './foo.wasm';` instead of `import foo from './foo.c';`, because `dumber` has no idea that the final `foo.wasm` was compiled from `foo.c`.
+> Same as dealing with babel and TypeScript, `dumber` doesn't care how you compile the original source (like c or c++ source file) into wasm file. It's user's responsibility to handle the compilation (from c or other languages to wasm) in gulp pipeline. On top of that, user also needs `import foo from './foo.wasm';` instead of `import foo from './foo.c';`, because `dumber` has no idea that the final `foo.wasm` was compiled from `foo.c`.
 
 ## 3. json files
 
@@ -73,7 +73,7 @@ const dr = dumber({
 });
 ```
 
-Similar to js files, `dumber` doesn't understand `.scss` or `.less` files. You need to use gulp-sass or gulp-less to transpile those files into `.css` vinyl files before sending to `dumber`.
+> Similar to js files, `dumber` doesn't understand `.scss` or `.less` files. You need to use gulp-sass or gulp-less to transpile those files into `.css` vinyl files before sending to `dumber`.
 
 If your source file is `foo.scss`, you can use either `import './foo.css';` or `import './foo.scss';`. Recommend you to use `import './foo.scss';`, as it's least surprising, and compatible with test frameworks Jest and AVA running in Nodejs environment.
 
@@ -83,7 +83,7 @@ The real bundled module id is `foo.css` as it is the only file `dumber` saw (aft
 
 All unknown files are treated as text modules. The includes html files.
 
-This means `dumber` cannot bundle binary files like jpeg pictures. (`wasm` is the only binary format `dumber` accepts.)
+> This means `dumber` cannot bundle binary files like jpeg pictures. (`wasm` is the only binary format `dumber` accepts.)
 
 ## 6. npm files
 
