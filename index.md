@@ -31,7 +31,7 @@ Which enables:
 
 * npm packages compatibility.
 * Flexible [code splitting](./options/code-split).
-* Runtime module requiring.
+* [Runtime module requiring](./options/on-require).
 * [Runtime app composition](./runtime-app-composition).
 
 ## License
