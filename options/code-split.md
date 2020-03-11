@@ -21,10 +21,10 @@ With the help from an AMD module loader, [`dumber-module-loader`](https://github
 The optional codeSplit callback is called for every single module, it takes two arguments:
 
 1. moduleId:
-  * For local src file `src/foo/bar.js`, the module id is `foo/bar`.
+  * For local src file `src/foo/bar.js`, the module id is `foo/bar.js`.
   * For local src file `src/foo/bar.css` (or any other non-js file), the module id is `foo/bar.css`.
-  * For npm package file `node_modules/foo/bar.js`, the module id is `foo/bar`.
-  * For scoped npm package file `node_modules/@scoped/foo/bar.js`, the module id is `@scoped/foo/bar`.
+  * For npm package file `node_modules/foo/bar.js`, the module id is `foo/bar.js`.
+  * For scoped npm package file `node_modules/@scoped/foo/bar.js`, the module id is `@scoped/foo/bar.js`.
 2. packageName:
   * For any local src file, the package name is undefined.
   * For npm package file `node_modules/foo/bar.js`, the package name is `foo`.

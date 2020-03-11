@@ -135,19 +135,23 @@ function build() {
 ## Module id for local source files
 
 Module id for a local source is relative to [src path](./options/src) (default to `"src"`).
-* For local src file `src/foo/bar.js`, the module id is `foo/bar`.
+* For local src file `src/foo/bar.js`, the module id is `foo/bar.js`.
 * For local src file `src/foo/bar.css` (or any other non-js file), the module id is `foo/bar.css`.
+
+> Early versions of `dumber` normalises module id for JavaScript files like `src/foo/bar.js` to `foo/bar` (stripped `.js` file extension), because that's usually how user requires or imports it. Latest version of `dumber` changed the behaviour to retain all file extension in module id. This is for better support of latest Nodejs ES Modules `.mjs` and `.cjs` files, because Nodejs now requires [mandatory file extensions](https://nodejs.org/dist/latest-v12.x/docs/api/esm.html#esm_mandatory_file_extensions).
+
+> No matter how `dumber` assigns module id internally, `bar.js` or `bar`, it doesn't affect user code. User can import either `./bar.js` or `./bar`. `dumber` allows user code to omit `.js`, `.cjs` or `.mjs` file extension. This module id compatibility is handled by [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader).
 
 ## Module id for npm package file
 
 Module id for a npm package file starts with npm package name.
 
-* For npm package file `node_modules/foo/bar.js`, the module id is `foo/bar`.
-* For scoped npm package file `node_modules/@scoped/foo/bar.js`, the module id is `@scoped/foo/bar`.
+* For npm package file `node_modules/foo/bar.js`, the module id is `foo/bar.js`.
+* For scoped npm package file `node_modules/@scoped/foo/bar.js`, the module id is `@scoped/foo/bar.js`.
 
 ## Above-surface module id
 
-When a local file is out of [src path](./options/src), for example `foo/bar.js` in folder `foo/`, not folder `src/`, the module id assigned will be `../foo/bar` as if it's relative to `src/` folder.
+When a local file is out of [src path](./options/src), for example `foo/bar.js` in folder `foo/`, not folder `src/`, the module id assigned will be `../foo/bar.js` as if it's relative to `src/` folder.
 
 RequireJS doesn't support absolute module id starting with `../` (it confuses RequireJS as relative module id).
 
@@ -155,6 +159,6 @@ RequireJS doesn't support absolute module id starting with `../` (it confuses Re
 
 ## Two module spaces
 
-[`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) separates local sources and npm packages into two module spaces: `user` and `package`. This is designed to solve one RequireJS problem: module id conflicts. For example, a local file `src/util.js` with assigned module id `util` overshadows npm core package `util`.
+[`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader) separates local sources and npm packages into two module spaces: `user` and `package`. This is designed to solve one RequireJS problem: local module id conflicts with npm package names.
 
 The module spaces are totally transparent to the users of `dumber` bundler. If you are interested, read more at [https://github.com/dumberjs/dumber-module-loader](https://github.com/dumberjs/dumber-module-loader).
