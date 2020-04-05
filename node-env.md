@@ -31,7 +31,7 @@ The two different builds will capture different `NODE_ENV` value in generated bu
 
 `dumber` not only captures the `NODE_ENV` value for app to consume at runtime, but it also pro-actively removes some conditional branch.
 
-The veryy first code snippet in this page will be removed totally from final bundle when `NODE_ENV` is not production.
+The very first code snippet in this page will be removed totally from final bundle when `NODE_ENV` is not production.
 
 The code removal only works for very simple usage. It would not remove code for slightly more complex situations. For example:
 
