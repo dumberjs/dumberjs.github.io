@@ -15,10 +15,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 ```
 
-It will respect the `NODE_ENV` value captured at the time when the bundle files were created.
+It will respect the `NODE_ENV` value captured at the bundling time.
 
 ```bash
+# NODE_ENV is empty string
 npx gulp build
+
+# NODE_ENV is "production"
 env NODE_ENV=production npx gulp build
 ```
 
@@ -28,7 +31,7 @@ The two different builds will capture different `NODE_ENV` value in generated bu
 
 `dumber` not only captures the `NODE_ENV` value for app to consume at runtime, but it also pro-actively removes some conditional branch.
 
-The above code snippet will be removed totally from final bundle when `NODE_ENV` is not production.
+The veryy first code snippet in this page will be removed totally from final bundle when `NODE_ENV` is not production.
 
 The code removal only works for very simple usage. It would not remove code for slightly more complex situations. For example:
 
