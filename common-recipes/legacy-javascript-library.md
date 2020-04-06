@@ -10,6 +10,6 @@ parent: Common recipes
 
 > It's very rare nowadays for a JavaScript library not supporting any module format. When you encounter them, it's probably better to find a better alternative, or send them a PR (pull request).
 
-There are two ways to incorporate legacy JavaScript libraries into your app, [shim](../optinos/deps#shim) or [prepend](../optinos/prepend-and-append).
+There are two ways to incorporate legacy JavaScript libraries into your app, [shim](../options/deps#shim) or [prepend](../options/prepend-and-append).
 
-Read [shim guide](../optinos/deps#shim) for more details.
+Read [shim guide](../options/deps#shim) for more details.
