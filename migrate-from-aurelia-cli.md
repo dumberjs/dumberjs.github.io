@@ -35,7 +35,7 @@ For Aurelia 2, use official skeleton `npx makes aurelia`, then choose "Custom Au
 
 ### Source files
 
-In the gulp build task (`tasks/build.js` for Aurelia 1, or `gulpfile.js` for Aurelia 2), user can modify the source files directly.
+In the gulp file `gulpfile.js`, user can modify the source files directly.
 
 ```js
 function build() {
