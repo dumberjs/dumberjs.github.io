@@ -34,7 +34,7 @@ For other all-in-one bundlers, they are super easy to get started with small app
 
 ## Quick example
 
-Take an example, if you created an new project with `npx makes dumberjs new-project -s aurelia,sass`, your `gulpfile.js` is logically similar to the following simplified snippet:
+Take an example, if you created an new project with `npx makes dumberjs new-project -s aurelia,sass`, your local `gulpfile.js` is logically similar to the following simplified snippet:
 
 ```js
 const dumber = require('gulp-dumber');

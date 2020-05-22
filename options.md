@@ -8,7 +8,7 @@ has_children: true
 
 # Options
 
-gulp-dumber supports various options.
+gulp-dumber supports various options. You can modify the options in your local `gulpfile.js`.
 
 ```js
 const dumber = require('gulp-dumber');
