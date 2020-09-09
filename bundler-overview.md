@@ -21,7 +21,7 @@ Why they are huge? Because they added lots of features on top of the core busine
 ## Dumber is dumb
 `dumber` does none of those, it's all about trace and pack, aka bundling.
 
-The total code in core `dumber` is just 3.3K lines of JavasScript (includes [`dumber`](https://github.com/dumberjs/dumber), [`gulp-dumber`](https://github.com/dumberjs/gulp-dumber), [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader), [`modify-code`](https://github.com/dumberjs/modify-code), and [`ast-matcher`](https://github.com/dumberjs/ast-matcher)). There are additional 200 lines in [`aurelia-deps-finder`](https://github.com/dumberjs/aurelia-deps-finder) to support classic [Aurelia](https://aurelia.io) in dumber.
+The total code in core `dumber` is just less than 4 thousand lines of JavasScript (includes [`dumber`](https://github.com/dumberjs/dumber), [`gulp-dumber`](https://github.com/dumberjs/gulp-dumber), [`dumber-module-loader`](https://github.com/dumberjs/dumber-module-loader), [`modify-code`](https://github.com/dumberjs/modify-code), and [`ast-matcher`](https://github.com/dumberjs/ast-matcher)). There are additional 200 lines in [`aurelia-deps-finder`](https://github.com/dumberjs/aurelia-deps-finder) to support classic [Aurelia](https://aurelia.io) in dumber.
 
 `dumber` downgrades bundling to be a tiny step in gulp pipeline, and let gulp to take the centre stage. This humble design gained enormous flexibility with existing tools in gulp.
 
