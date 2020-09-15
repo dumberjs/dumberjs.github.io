@@ -84,7 +84,7 @@ dumber({
 Note you actually doesn't need to use the above conditional dependency to support `aurelia-testing`. `dumber` understands `NODE_ENV`, user can directly do conditional dependency in code. See [`NODE_ENV`](./node-env) for more details.
 
 ```js
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV !== 'production') {
   aurelia.use.plugin('aurelia-testing');
 }
 ```
