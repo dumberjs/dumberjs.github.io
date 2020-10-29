@@ -62,7 +62,7 @@ codeSplit: function(moduleId, packageName) {
 }
 ```
 
-Note, when you have some [above-surface](../resources/above-surface-module-id) modules, they starts with `"../"`, so you would need:
+Note, when you have some [above-surface](../resources#above-surface-module-id) modules, they starts with `"../"`, so you would need:
 
 ```js
 if (parts.length > 1 && parts[0] !== '..') return parts[0] + '-bundle';
