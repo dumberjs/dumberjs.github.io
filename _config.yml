@@ -1,7 +1,7 @@
 remote_theme: pmarsceill/just-the-docs
 url: //dumber.js.org
 search_enabled: true
-color_scheme: wider
+# color_scheme: wider
 title: dumber
 aux_links:
   dumber:
