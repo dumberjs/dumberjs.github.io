@@ -24,7 +24,8 @@ You can supply either a local file path, or piece of code directly.
 prepend: [
   // Promise polyfill for IE
   "node_modules/promise-polyfill/dist/polyfill.min.js",
-  "var my_global_var = { clientName: 'foo' };"
+  "var my_global_var = { clientName: 'foo' };",
+  "https://some.remote/path/works/too"
 ]
 ```
 
