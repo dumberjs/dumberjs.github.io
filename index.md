@@ -16,7 +16,7 @@ A dumb JavasScript bundler for Single Page Application, dumber than you and me.
 
 ---
 
-`dumber` is very different that other bundlers.
+`dumber` is very different than other bundlers.
 
 While all others are packed with seemingly necessary features to deliver bundling, `dumber` does only one thing: bundling resources, and does it well.
 
