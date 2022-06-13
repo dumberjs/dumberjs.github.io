@@ -15,7 +15,7 @@ permalink: /migrate-from-aurelia-cli
 2. Fixed compatibility with various npm packages which is impossible for `aurelia-cli` due to architecture flaw.
 3. Greatly simplified configuration.
 
-> The upcoming Aurelia 2 uses `dumber` as an alternative offering of webpack. `aurelia-cli` built-in bundler will be only maintained to support Aurelia 1.
+> Aurelia 2 uses `dumber` as an alternative offering besides webpack. `aurelia-cli` built-in bundler will be only maintained to support Aurelia 1.
 
 > It's definitely not required for the users of `aurelia-cli` to migrate to `dumber`, as `aurelia-cli` will be continuously supported. However `dumber` does offer the above improvements that users might want to try out.
 
